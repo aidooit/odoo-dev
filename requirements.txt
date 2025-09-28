@@ -1,0 +1,5 @@
+python-dotenv
+requests
+debugpy
+rich
+ipython

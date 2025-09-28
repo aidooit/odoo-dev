@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo: Debug",
+            "type": "python",
+            "request": "attach",
+            "port": 8879,
+            "debugServer": 9999,
+            "host": "localhost",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/addons",
+                    "remoteRoot": "/mnt/extra-addons", //path to custom addons inside docker
+                },
+                {
+                    "localRoot": "/Users/ivisorea/Rei/odoo/odoo",
+                    "remoteRoot": "/usr/lib/python3/dist-packages/odoo", //path to odoo source code inside docker
+                }
+            ],
+            "logToFile": true,
+            "justMyCode": false //allows to debugg also Odoo core code
+        }
+    ]
+}
