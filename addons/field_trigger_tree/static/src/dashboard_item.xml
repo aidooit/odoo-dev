@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="field_trigger_tree.DashboardItem">
+        <div class="dashboard-item-container">
+            <div id="graph" class="graph-container"></div>
+        </div>
+    </t>
+
+</templates>

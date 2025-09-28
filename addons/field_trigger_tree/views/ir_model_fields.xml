@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_model_field_form_view_inherit" model="ir.ui.view">
+        <field name="name">res.model.field.form.view.inherit</field>
+        <field name="model">ir.model.fields</field>
+        <field name="inherit_id" ref="base.view_model_fields_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_open_field_trigger_tree"
+                        type="object"
+                        class="oe_stat_button"
+                        string="Trigger Tree"
+                        icon="fa-code-fork"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

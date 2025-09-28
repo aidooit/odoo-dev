@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="field_trigger_tree.FieldTreeDashboard">
+        <Layout display="{ controlPanel: {}}">
+            <div class="dashboard-header">
+                <h3>Field Trigger Tree</h3>
+                <p class="text-muted">
+                    Tree of all fields that depends on the current field. They will be re-computed 
+                    when the current field changes.
+                </p>
+            </div>
+            <div class="dashboard-content">
+                <DashboardItem 
+                    model_name="props.action.params.model_name"
+                    field_name="props.action.params.field_name"
+                />
+            </div>
+        </Layout>    
+    </t>
+
+</templates>
