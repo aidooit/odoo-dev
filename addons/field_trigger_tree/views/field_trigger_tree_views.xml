@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <record model="ir.actions.client" id="dashboard">
+      <field name="name">Dashboard</field>
+      <field name="tag">field_trigger_tree.dashboard</field>
+    </record>
+
+    <menuitem
+      name="Field Tree Dashboard"
+      id="field_trigger_tree.menu_root"
+      groups="base.group_user"
+    />
+    <menuitem 
+      name="Dashboard"
+      id="field_trigger_tree.dashboard_menu"
+      parent="field_trigger_tree.menu_root"
+      action="field_trigger_tree.dashboard" sequence="1"
+    />
+  </data>
+</odoo>
