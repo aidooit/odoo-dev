@@ -1,4 +1,4 @@
-FROM odoo:18.0
+FROM odoo:17.0
 
 USER root
 
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python packages
 COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install --break-system-packages --no-cache-dir -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
 USER odoo
 

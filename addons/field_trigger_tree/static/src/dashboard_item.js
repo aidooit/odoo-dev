@@ -1,6 +1,8 @@
+/** @odoo-module **/
+
 import { loadJS, loadCSS } from "@web/core/assets";
 import { Component, onWillStart, onMounted } from "@odoo/owl";
-import { rpc } from "@web/core/network/rpc";
+import { useService } from "@web/core/utils/hooks";
 
 export class DashboardItem extends Component {
     static template = "field_trigger_tree.DashboardItem"
@@ -14,11 +16,12 @@ export class DashboardItem extends Component {
         this.fieldName = this.props.field_name;
         this.data = {};
         this.sourceField = "";
-        
+        this.rpc = useService("rpc");
+
         onWillStart(async () => {
             await loadJS("/field_trigger_tree/static/lib/D3/d3.v7.min.js");
             await loadCSS("/field_trigger_tree/static/src/dashboard_item.css");
-            await rpc(
+            await this.rpc(
                 "/field_trigger_tree", 
                 { 
                     model_name: this.modelName,
